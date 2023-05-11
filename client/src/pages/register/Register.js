@@ -23,7 +23,7 @@ const Login = () => {
     e.preventDefault();
     dispatch({ type: "REGISTER_START" });
     try {
-      const res = await axios.post("/auth/register", credentials);
+      const res = await axios.post("api/auth/register", credentials);
       console.log(res.data);
       dispatch({ type: "REGISTER_SUCCESS", payload: res.data.details });
       navigate("/")
